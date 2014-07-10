@@ -8,6 +8,10 @@ if (Package.ui) {
 		return Session.get("cloudinary_upload.upload_successful");
 	});
 
+	Package.ui.Handlebars.registerHelper('c_upload', function() {
+		return Session.get("cloudinary_upload");
+	});
+
 	Package.ui.Handlebars.registerHelper('c_upload_failed', function() {
 		return Session.get("cloudinary_upload.upload_failed");
 	});
